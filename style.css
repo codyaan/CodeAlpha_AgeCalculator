@@ -1,0 +1,159 @@
+/* Importing roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+
+/* Defining the colors  */
+:root{
+    --main-color: #FCA311;
+    --secondary-color: #14213d;
+    --font-color: #fff;
+    --dim-color: #667085;
+}
+
+
+
+/* Resetting Default CSS  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+/* Styling main container  */
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Styling the calculator body  */
+.calculator-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+/* styling the calculator screen */
+.calculator-screen{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--secondary-color);
+    padding: 2.4rem 1.3rem;
+    border-radius: .4rem;
+    box-shadow: 0 0 1.5rem black;
+    
+}
+
+
+/* Styling the input  */
+.calculator-screen input{
+    border: none;
+    outline: none;
+    padding: .8rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: .4rem;
+}
+
+
+
+/* Styling the button  */
+.calculator-screen button{
+    padding: .8rem 1rem;
+    border-radius: .4rem;
+    border: none;
+    outline: none;
+    background-color: var(--font-color);
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.calculator-screen button:hover{
+    background-color: var(--dim-color);
+    color: var(--font-color);
+}
+
+
+
+/* Styling the display  */
+.display{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling display items  */
+.display .display-items{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--font-color);
+    background-color: var(--secondary-color);
+    width: 130px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .4rem;
+    box-shadow: 0 0 1.5rem black;
+}           
+
+
+/* Styling the text of every display item  */
+.display .display-items .display-text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dim-color);
+}
+
+
+
+/* Adding Responsiveness  */
+@media screen and (max-width: 550px) {
+
+    .calculator-body{
+        gap: 1rem;
+    }
+
+
+    .calculator-screen{
+        padding: 2.9rem  .9rem;
+        gap: 1rem;
+    }
+    .calculator-screen input{
+        font-size: .9rem;
+        padding: .6rem .8rem;
+    }
+
+    .calculator-screen button{
+        font-size: .9rem;
+        padding: .6rem .8rem;
+    }
+    .display .display-items{
+        width: 100%;
+        font-size: 4rem;
+    }
+    .display .display-items .display-text{
+        font-size: 1.5rem;
+    }
+    .display{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}
